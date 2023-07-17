@@ -1,0 +1,57 @@
+@import '../../../../../dist/scss/variables.scss';
+
+section {
+  width: 100%;
+  min-height: 250px;
+
+  border-radius: 8px;
+  background: $secondary-background-color;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, .08);
+
+  margin-top: 16px;
+
+  &.loading {
+    background-image: url('../../../../../assets/img/empty-state.png');
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  ul {
+    padding: 16px;
+
+    li {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      margin-bottom: 8px;
+
+      input {
+        &[type="checkbox"]{
+          width: 6%;
+        }
+        &[type="text"]{
+          width: 80%;
+          padding: 8px 12px;
+          border: none;
+
+          font-size: 16px;
+          color: $primary-text-color;
+          &.checked {
+            text-decoration: line-through;
+          }
+        }
+      }
+
+      button {
+        width: 6%;
+        background: none;
+        border: none;
+
+        img {
+          width: 18px;
+        }
+      }
+    }
+  }
+}

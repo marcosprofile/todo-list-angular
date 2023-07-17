@@ -1,0 +1,44 @@
+@import '../../../../../dist/scss/variables.scss';
+
+:host {
+  display: flex;
+  justify-content: center;
+  margin-top: 16px;
+
+  .add-task {
+    display: flex;
+    align-items: center;
+
+    width: 100%;
+
+    position: relative;
+
+    input {
+      width: 100%;
+
+      border: none;
+      border-radius: 6px 0 0 6px;
+      background: $tertiary-background-color;
+
+      font-size: 16px;
+      color: $secondary-text-color;
+
+      padding: 16px 0 16px 16px;
+      box-sizing: border-box;
+
+      &::placeholder {
+        color: $secondary-text-color;
+        opacity: .4;
+      }
+    }
+
+    button {
+      width: 48px;
+      height: 100%;
+
+      border: none;
+      border-radius: 0 6px 6px 0;
+      background: $tertiary-background-color;
+    }
+  }
+}

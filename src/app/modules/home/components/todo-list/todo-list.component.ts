@@ -28,7 +28,7 @@ export class TodoListComponent implements DoCheck {
   }
 
   public deleteAllTaskList() {
-    const confirm = window.confirm('Você deseja realmente Deletar tudo?')
+    const confirm = window.confirm('Você deseja realmente deletar tudo?');
 
     if (confirm) {
       this.taskList = [];
@@ -37,7 +37,7 @@ export class TodoListComponent implements DoCheck {
 
   public validationInput(event: string, index: number) {
     if (!event.length) {
-      const confirm = window.confirm('Task está vazia, deseja Deletar?');
+      const confirm = window.confirm('Task está vazia, deseja deletar?');
 
       if (confirm) {
         this.deleteItemTaskList(index);
@@ -47,7 +47,7 @@ export class TodoListComponent implements DoCheck {
 
   public setLocalStorage() {
     if (this.taskList) {
-      this.taskList.sort( (first, last) => Number(first.checked) - Number(last.checked))
+      this.taskList.sort( (first, last) => Number(first.checked) - Number(last.checked));
       localStorage.setItem("list", JSON.stringify(this.taskList));
     }
   }
